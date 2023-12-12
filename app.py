@@ -7,7 +7,7 @@ CORS(app)  # Enable CORS for all routes
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'Desgin-E.png')
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.icon', mimetypes='Desgin-E.png')
 @app.route('/')
 def index():
     return "Hello, Python!"
