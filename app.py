@@ -93,4 +93,5 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 if __name__ == "__main__":
-    app.run(port=int(os.environ.get("PORT", 7000)))
+    # app.run(port=int(os.environ.get("PORT", 7000)))
+    app.run(debug=True)
