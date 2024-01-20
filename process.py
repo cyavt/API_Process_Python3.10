@@ -14,7 +14,7 @@ from rembg import remove
 
 # Process image to text
 custom_config = r'--oem 3 --psm 6 -l vie'
-pytesseract.pytesseract.tesseract_cmd = r'D:\App\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'/app/.apt/usr/bin/tesseract'
 def run_img_to_text(image_path):
     img = Image.open(image_path)
     text = pytesseract.image_to_string(img, config=custom_config)
