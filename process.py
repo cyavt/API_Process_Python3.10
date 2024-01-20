@@ -7,9 +7,9 @@ from selenium.webdriver.common.by import By
 import time
 
 # Import libraries for image processing
-from PIL import Image
+from PIL import Image, __version__
 import pytesseract
-
+# print(f"Pillow version: {__version__}")
 # Import libraries for remove background
 from rembg import remove
 
