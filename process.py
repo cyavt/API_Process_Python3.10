@@ -1,5 +1,6 @@
 # Author: Nguyen Van Truc
 # Date: 2024/01/20
+import os
 
 # Import libraries auch as selenium, time, PIL, pytesseract
 from selenium import webdriver
@@ -13,7 +14,7 @@ import pytesseract
 from rembg import remove
 
 # Process image to text
-# custom_config = r'--oem 3 --psm 6 -l vie'
+os.environ['TESSDATA_PREFIX'] = '/app/.apt/usr/share/tesseract-ocr/4.00/tessdata'
 pytesseract.pytesseract.tesseract_cmd = r'/app/.apt/usr/bin/tesseract'
 def run_img_to_text(image_path):
     img = Image.open(image_path)
