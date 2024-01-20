@@ -17,7 +17,7 @@ from rembg import remove
 pytesseract.pytesseract.tesseract_cmd = r'/app/.apt/usr/bin/tesseract'
 def run_img_to_text(image_path):
     img = Image.open(image_path)
-    text = pytesseract.image_to_string(img, config=custom_config)
+    text = pytesseract.image_to_string(img, lang='vie')
     return text
 def run_remove_bg(image_path):
     input = Image.open(image_path)
